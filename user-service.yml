@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: user-service
+  datasource:
+    url: jdbc:postgresql://postgres:5432/users
+    username: aliya
+    password: aliya123
+server:
+  port: 8081
+
+
+
