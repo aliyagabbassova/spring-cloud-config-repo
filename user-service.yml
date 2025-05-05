@@ -1,14 +1,18 @@
+server:
+  port: 8081
+
 spring:
   application:
     name: user-service
   config:
-    import: "configserver:http://localhost:8888"
+    import: optional:config-server:http://localhost:8888
+  cloud:
+    config:
+      fail-fast: false
   datasource:
     url: jdbc:postgresql://postgres:5432/users
     username: aliya
     password: aliya123
-
-server:
-  port: 8081
+    driver-class-name: org.postgresql.Driver
 
 
