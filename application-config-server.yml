@@ -9,8 +9,6 @@ spring:
       server:
         git:
           uri: https://github.com/aliyagabbassova/spring-cloud-config-repo.git
-          username: aliyagabbassova
-          password: AkhmadIbrakhim1306
           skip-ssl-validation: true
           default-label: main
           clone-on-start: true
