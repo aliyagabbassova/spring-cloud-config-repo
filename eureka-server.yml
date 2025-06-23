@@ -5,9 +5,15 @@ spring:
   application:
     name: eureka-server
   config:
-    import: optional:configserver:http://config-server:8888
+    # отключаем получение внешней конфигурации, чтобы избежать зависимости от config-server
+    enabled: false
 
 eureka:
   client:
     register-with-eureka: false
     fetch-registry: false
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
